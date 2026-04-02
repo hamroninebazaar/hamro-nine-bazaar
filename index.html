@@ -20,7 +20,9 @@ header {
 }
 header img {
     border-radius: 20px;
-    width: 200px;
+    width: 200px;        /* desktop default size */
+    max-width: 40vw;     /* responsive max width */
+    height: auto;
     margin-bottom: 15px;
 }
 header h1 {
@@ -29,6 +31,19 @@ header h1 {
 }
 header p {
     font-size: 1.2em;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+    header img {
+        width: 120px;     /* smaller logo for mobile */
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
 }
 
 /* Navigation */
